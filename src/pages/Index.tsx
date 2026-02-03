@@ -1,13 +1,73 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import HeroSection from "@/components/HeroSection";
+import QuizSection from "@/components/QuizSection";
+import ResultsSection from "@/components/ResultsSection";
+
+type View = "hero" | "quiz" | "results";
 
 const Index = () => {
+  const [currentView, setCurrentView] = useState<View>("hero");
+  const [quizAnswers, setQuizAnswers] = useState<number[]>([]);
+
+  const handleStartQuiz = () => {
+    setCurrentView("quiz");
+    // Smooth scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleQuizComplete = (answers: number[]) => {
+    setQuizAnswers(answers);
+    setCurrentView("results");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleRestart = () => {
+    setQuizAnswers([]);
+    setCurrentView("hero");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="bg-background min-h-screen overflow-x-hidden">
+      <AnimatePresence mode="wait">
+        {currentView === "hero" && (
+          <motion.div
+            key="hero"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <HeroSection onStartQuiz={handleStartQuiz} />
+          </motion.div>
+        )}
+
+        {currentView === "quiz" && (
+          <motion.div
+            key="quiz"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <QuizSection onComplete={handleQuizComplete} />
+          </motion.div>
+        )}
+
+        {currentView === "results" && (
+          <motion.div
+            key="results"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ResultsSection onRestart={handleRestart} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </main>
   );
 };
 
