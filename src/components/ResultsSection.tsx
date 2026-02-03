@@ -27,7 +27,7 @@ interface Category {
 
 const categories: Category[] = [
   {
-    title: "Pentru când te-ai săturat să iubești prost",
+    title: "Pentru vindecare, nu iluzii",
     description: "Povești intense, relații complicate și emoții care nu cer permisiune.",
     books: [
       {
