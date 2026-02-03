@@ -4,9 +4,9 @@ import BookCard from "./BookCard";
 import { Button } from "@/components/ui/button";
 
 // Import book covers
-import bookCover1 from "@/assets/book-cover-1.jpg";
-import bookCover2 from "@/assets/book-cover-2.jpg";
-import bookCover3 from "@/assets/book-cover-3.jpg";
+import capitanulCover from "@/assets/capitanul-cover.png";
+import legatiPrinUraCover from "@/assets/legati-prin-ura-cover.png";
+import chasingTheWildCover from "@/assets/chasing-the-wild-cover.png";
 import bookCover4 from "@/assets/book-cover-4.jpg";
 import bookCover5 from "@/assets/book-cover-5.jpg";
 import bookCover6 from "@/assets/book-cover-6.jpg";
@@ -31,22 +31,22 @@ const categories: Category[] = [
     description: "Povești intense, relații complicate și emoții care nu cer permisiune.",
     books: [
       {
-        title: "Twisted Love",
-        author: "Ana Huang",
-        coverImage: bookCover1,
-        shopLink: "#",
+        title: "Căpitanul",
+        author: "Ivo Dima",
+        coverImage: capitanulCover,
+        shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
       },
       {
-        title: "Haunting Adeline",
-        author: "H.D. Carlton",
-        coverImage: bookCover3,
-        shopLink: "#",
+        title: "Legați prin ură",
+        author: "Cora Reilly",
+        coverImage: legatiPrinUraCover,
+        shopLink: "https://elirebooks.ro/legati-prin-ura-cora-reilly-elire/",
       },
       {
-        title: "It Ends with Us",
-        author: "Colleen Hoover",
-        coverImage: bookCover8,
-        shopLink: "#",
+        title: "Chasing the Wild",
+        author: "Elliott Rose",
+        coverImage: chasingTheWildCover,
+        shopLink: "https://elirebooks.ro/chasing-the-wild-elliott-rose/",
       },
     ],
   },
@@ -93,7 +93,7 @@ const categories: Category[] = [
       {
         title: "Kingdom of the Wicked",
         author: "Kerri Maniscalco",
-        coverImage: bookCover2,
+        coverImage: bookCover8,
         shopLink: "#",
       },
     ],
