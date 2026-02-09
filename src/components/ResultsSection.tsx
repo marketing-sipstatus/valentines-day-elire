@@ -17,6 +17,8 @@ import legatiPrinOnoareCover from "@/assets/legati-prin-onoare-cover.webp";
 import datorieItalianaCover from "@/assets/datorie-italiana-cover.webp";
 import theWordsCover from "@/assets/the-words-cover.webp";
 import dorinteAscunseCover from "@/assets/dorinte-ascunse-cover.webp";
+import subjugareCover from "@/assets/subjugare-cover.webp";
+import theNeverKingCover from "@/assets/the-never-king-cover.webp";
 
 interface Category {
   id: "INT" | "EMO" | "PWR";
@@ -51,13 +53,13 @@ const allCategories: Category[] = [
       {
         title: "Taboo Billionaires #3: Subjugare",
         author: "Hanna Lee",
-        coverImage: bookCover4,
+        coverImage: subjugareCover,
         shopLink: "https://elirebooks.ro/taboo-billionaires-03-subjugare-hanna-lee-elire/",
       },
       {
         title: "The Never King",
         author: "Nikkie St. Crowe",
-        coverImage: bookCover5,
+        coverImage: theNeverKingCover,
         shopLink: "https://elirebooks.ro/the-never-king-nikkie-st-crowe/",
       },
     ],
