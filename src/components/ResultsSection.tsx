@@ -229,7 +229,6 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
             <Heart size={14} className="text-rose" fill="currentColor" />
           </div>
           <p>Cu dragoste, de Valentine's Day 2025</p>
-          <p className="mt-4 text-xs text-muted-foreground">Debug: quizResult = {quizResult}</p>
         </motion.footer>
       </div>
     </section>
