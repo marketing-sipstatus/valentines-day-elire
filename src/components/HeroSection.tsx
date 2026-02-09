@@ -60,8 +60,8 @@ const HeroSection = ({ onStartQuiz }: HeroSectionProps) => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-plum leading-tight mb-6"
           >
-            Ce carte Elire e pentru tine de{" "}
-            <span className="text-gradient italic">Valentine's</span>?
+            Ești pregătită de un{" "}
+            <span className="text-gradient italic">blind date literar</span>?
           </motion.h1>
 
           {/* Subheadline */}
@@ -71,7 +71,7 @@ const HeroSection = ({ onStartQuiz }: HeroSectionProps) => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 font-light"
           >
-            Răspunde la 4 întrebări și descoperă ce poveste ți se potrivește acum.
+            De Valentine's Day, te provocăm să te lași aleasă de cartea care ți se potrivește. Răspunde la câteva întrebări și noi îți facem match!
           </motion.p>
 
           {/* CTA Button */}
@@ -86,26 +86,11 @@ const HeroSection = ({ onStartQuiz }: HeroSectionProps) => {
               className="bg-gradient-button text-primary-foreground hover:opacity-90 transition-all duration-300 px-10 py-6 text-lg font-medium shadow-romantic hover:shadow-glow rounded-full"
             >
               <Sparkles className="mr-2" size={18} />
-              Începe quiz-ul
+              Găsește-mi match-ul!
             </Button>
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-lavender-deep/30 flex justify-center pt-2"
-          >
-            <div className="w-1.5 h-1.5 rounded-full bg-lavender-deep/50" />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
