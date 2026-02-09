@@ -60,7 +60,8 @@ const HeroSection = ({ onStartQuiz }: HeroSectionProps) => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-plum leading-tight mb-6"
           >
-            Ești pregătită de un{" "}
+            Ești pregătită de un
+            <br />
             <span className="text-gradient italic">blind date literar</span>?
           </motion.h1>
 
