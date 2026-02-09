@@ -15,6 +15,7 @@ import bookCover8 from "@/assets/book-cover-8.jpg";
 import bookCover9 from "@/assets/book-cover-9.jpg";
 
 interface Category {
+  id: "INT" | "EMO" | "PWR";
   title: string;
   description: string;
   books: {
@@ -25,9 +26,10 @@ interface Category {
   }[];
 }
 
-const categories: Category[] = [
+const allCategories: Category[] = [
   {
-    title: "Pentru vindecare, nu iluzii",
+    id: "INT",
+    title: "Povești dominate de intensitate și intrigă",
     description: "Povești intense, relații complicate și emoții care nu cer permisiune.",
     books: [
       {
@@ -51,7 +53,8 @@ const categories: Category[] = [
     ],
   },
   {
-    title: "Pentru când vrei să simți totul",
+    id: "EMO",
+    title: "Povești emoționale și vindecătoare",
     description: "Emoții profunde, conexiuni care te transformă și povești care rămân cu tine.",
     books: [
       {
@@ -75,7 +78,8 @@ const categories: Category[] = [
     ],
   },
   {
-    title: "Pentru când vrei putere, nu lacrimi",
+    id: "PWR",
+    title: "Povești despre putere și decizie",
     description: "Eroine puternice, alegeri dificile și iubiri care nu te slăbesc.",
     books: [
       {
@@ -100,12 +104,24 @@ const categories: Category[] = [
   },
 ];
 
+const categoryOrder: Record<string, string[]> = {
+  INT: ["INT", "EMO", "PWR"],
+  EMO: ["EMO", "INT", "PWR"],
+  PWR: ["PWR", "INT", "EMO"],
+};
+
+const getOrderedCategories = (quizResult?: string): Category[] => {
+  const order = categoryOrder[quizResult || ""] || ["INT", "EMO", "PWR"];
+  return order.map((id) => allCategories.find((c) => c.id === id)!);
+};
+
 interface ResultsSectionProps {
   onRestart: () => void;
   quizResult?: string;
 }
 
 const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
+  const categories = getOrderedCategories(quizResult);
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-romantic relative overflow-hidden">
       {/* Decorative elements */}
