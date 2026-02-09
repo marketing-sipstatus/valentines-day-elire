@@ -128,7 +128,7 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
           </div>
 
           <h2 className="font-serif text-3xl md:text-5xl text-plum font-semibold mb-6">
-            Poveștile care ți se potrivesc acum
+            Recomandări literare cu care ai făcut match de Valentine's Day
           </h2>
           {quizResult === "INT" && (
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
