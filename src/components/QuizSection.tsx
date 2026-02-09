@@ -27,12 +27,12 @@ const questions = [
     ],
   },
   {
-    question: "Ce vibe cauți într-o carte?",
+    question: "Când vrei să evadezi într-un univers paralel, îți dorești…",
     options: [
-      "Dark & intense",
-      "Emoțional & sensibil",
-      "Dramă și tensiune",
-      "Putere și independență",
+      "…un loc calm, unde timpul curge fără presiune și toate întrebările capătă sens",
+      "…un loc unde totul pare temporar, iar apropierea vine la pachet cu pericolul",
+      "…un loc în care direcția e limpede, iar pașii vin natural",
+      "…un loc misterios care te provoacă să rămâi",
     ],
   },
   {
