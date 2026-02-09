@@ -36,12 +36,12 @@ const questions = [
     ],
   },
   {
-    question: "Cum îți plac finalurile?",
+    question: "Imaginează-ți că date-ul s-a încheiat. Cu ce sentiment vrei să rămâi după citirea cărții?",
     options: [
-      "Fericite, dar nu simple",
-      "Ambigue",
-      "Explozive",
-      "Vindecătoare",
+      "Cu dorința de a descoperi mai mult",
+      "Cu impresia că m-am regăsit",
+      "Cu încrederea că aș repeta experiența",
+      "Cu sentimentul că acesta a fost doar începutul",
     ],
   },
 ];
