@@ -171,25 +171,25 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-rose to-transparent" />
           </div>
 
-          <h2 className="font-serif text-3xl md:text-5xl text-plum font-semibold mb-6">
+          <h2 className="results-mobile-title font-serif text-3xl md:text-5xl text-plum font-semibold mb-6">
             Recomandări literare cu care ai făcut match de Valentine's Day
           </h2>
           {quizResult === "INT" && (
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
+            <p className="results-mobile-description text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
               Pentru tine, lectura nu e un refugiu, ci mai degrabă o ocazie de a descoperi și explora noi provocări. Nu te mulțumești cu povești cuminți. Te atrag firele narative pline de intrigă și ai tendința să alegi povești care cer implicare și care nu îți oferă răspunsuri simple.
               <br /><br />
               Când citești, cauți senzația că lucrurile pot lua o nouă întorsătură la fiecare pas. Tocmai această lipsă de siguranță te ține acolo, pagină după pagină.
             </p>
           )}
           {quizResult === "EMO" && (
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
+            <p className="results-mobile-description text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
               Pentru tine, lectura este un spațiu sigur. Rezonezi cu lumi echilibrate, în care lucrurile se construiesc firesc, iar emoțiile au timp să se clarifice. Nu cauți intensitate gratuită, ci profunzime.
               <br /><br />
               Alegi cărți care te însoțesc discret, care te lasă să simți și să înțelegi, fără să te copleșească. La final, nu rămâi cu întrebări apăsătoare, ci cu sentimentul că ai ajuns mai aproape de răspunsurile pe care le căutai și că te-ai regăsit în paginile cărții care pare a fi scrisă pentru tine.
             </p>
           )}
           {quizResult === "PWR" && (
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
+            <p className="results-mobile-description text-lg text-muted-foreground max-w-2xl mx-auto font-light italic">
               Ești atrasă de povești în care nimic nu este lăsat la voia întâmplării. Lumea ideală pentru tine are structură, cu direcție și un ritm bine controlat, iar dorința nu este impulsivă, ci asumată. Îți place să simți că fiecare pagină întoarsă mai pune o cărămidă la întregirea finalului pe care îl aștepți încrezătoare.
               <br /><br />
               Lecturile care te reprezintă sunt cele în care alegerile contează și nu sunt luate ușor. Sunt cărți care îți confirmă intuiția, îți dau energie și te fac să vrei să rămâi în același univers și să continui mai departe pe linia deja trasată.

@@ -183,4 +183,20 @@
   .quiz-mobile-question {
     margin-bottom: 1rem;
   }
+
+  .results-mobile-description {
+    font-size: 0.9375rem;
+    line-height: 1.45;
+  }
+
+  .results-mobile-description br + br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
+  }
+
+  .results-mobile-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
 }
