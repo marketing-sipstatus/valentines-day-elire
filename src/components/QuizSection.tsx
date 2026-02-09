@@ -18,12 +18,12 @@ const questions = [
     ],
   },
   {
-    question: "Ce te atrage cel mai mult într-o poveste?",
+    question: "Care e ingredientul principal al unei lecturi cu care rezonezi 100%?",
     options: [
-      "Emoția care doare",
-      "Personaje puternice și dominante",
-      "Iubiri imposibile",
-      "Vindecare și regăsire",
+      "Intensitate, conflicte și dorințe greu de controlat",
+      "Sensibilitate, emoție și vindecare",
+      "Putere, asumare și personaje memorabile",
+      "Imprevizibilul împletit cu o doză de risc",
     ],
   },
   {
