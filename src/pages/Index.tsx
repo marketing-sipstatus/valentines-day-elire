@@ -98,7 +98,7 @@ const Index = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <ResultsSection onRestart={handleRestart} />
+            <ResultsSection onRestart={handleRestart} quizResult={quizResult} />
           </motion.div>
         )}
       </AnimatePresence>
