@@ -19,6 +19,10 @@ import theWordsCover from "@/assets/the-words-cover.webp";
 import dorinteAscunseCover from "@/assets/dorinte-ascunse-cover.webp";
 import subjugareCover from "@/assets/subjugare-cover.webp";
 import theNeverKingCover from "@/assets/the-never-king-cover.webp";
+import buttonsAndLaceCover from "@/assets/buttons-and-lace-cover.webp";
+import capitanulCoverNew from "@/assets/capitanul-cover-new.webp";
+import cei13MagnificiCover from "@/assets/cei-13-magnifici-cover.webp";
+import duMaSpreNoiCover from "@/assets/du-ma-spre-noi-cover.webp";
 
 interface Category {
   id: "INT" | "EMO" | "PWR";
@@ -72,25 +76,25 @@ const allCategories: Category[] = [
       {
         title: "Buttons & Lace",
         author: "Penelope Sky",
-        coverImage: bookCover6,
+        coverImage: buttonsAndLaceCover,
         shopLink: "https://elirebooks.ro/buttons-and-lace-penelope-sky/",
       },
       {
         title: "Made Men Vol. 2: Căpitanul",
         author: "Ivo Dima",
-        coverImage: capitanulCover,
+        coverImage: capitanulCoverNew,
         shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
       },
       {
         title: "Cei 13 magnifici",
         author: "Hanna Lee",
-        coverImage: bookCover7,
+        coverImage: cei13MagnificiCover,
         shopLink: "https://elirebooks.ro/cei-13-magnifici-hanna-lee-elire/",
       },
       {
         title: "Du-mă spre noi",
         author: "Byanca Elysa",
-        coverImage: bookCover8,
+        coverImage: duMaSpreNoiCover,
         shopLink: "https://elirebooks.ro/du-ma-spre-noi-byanca-elysa/",
       },
     ],
