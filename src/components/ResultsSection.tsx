@@ -210,12 +210,14 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
             >
               {/* Category Header */}
               <div className="mb-8 md:mb-10">
-                <div className="flex items-center gap-3 mb-3">
-                  <Sparkles className="text-rose" size={18} />
-                  <span className="text-sm font-medium text-rose uppercase tracking-widest">
-                    Recomandare
-                  </span>
-                </div>
+                {categoryIndex < 2 && (
+                  <div className="flex items-center gap-3 mb-3">
+                    <Sparkles className="text-rose" size={18} />
+                    <span className="text-sm font-medium text-rose uppercase tracking-widest">
+                      {categoryIndex === 0 ? "Recomandare" : "Descoperă alte titluri"}
+                    </span>
+                  </div>
+                )}
                 <h3 className="font-serif text-2xl md:text-3xl text-plum font-semibold mb-3">
                   {category.title}
                 </h3>
