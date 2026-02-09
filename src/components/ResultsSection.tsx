@@ -30,13 +30,13 @@ const allCategories: Category[] = [
   {
     id: "INT",
     title: "Povești dominate de intensitate și intrigă",
-    description: "Povești intense, relații complicate și emoții care nu cer permisiune.",
+    description: "Intrigi construite atent, dinamici tensionate, relații complicate și răsturnări de situații care te țin captivă până la ultima pagină.",
     books: [
       {
-        title: "Căpitanul",
-        author: "Ivo Dima",
-        coverImage: capitanulCover,
-        shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
+        title: "Chasing the Wild",
+        author: "Elliott Rose",
+        coverImage: chasingTheWildCover,
+        shopLink: "https://elirebooks.ro/chasing-the-wild-elliott-rose/",
       },
       {
         title: "Legați prin ură",
@@ -45,60 +45,78 @@ const allCategories: Category[] = [
         shopLink: "https://elirebooks.ro/legati-prin-ura-cora-reilly-elire/",
       },
       {
-        title: "Chasing the Wild",
-        author: "Elliott Rose",
-        coverImage: chasingTheWildCover,
-        shopLink: "https://elirebooks.ro/chasing-the-wild-elliott-rose/",
+        title: "Taboo Billionaires #3: Subjugare",
+        author: "Hanna Lee",
+        coverImage: bookCover4,
+        shopLink: "https://elirebooks.ro/taboo-billionaires-03-subjugare-hanna-lee-elire/",
+      },
+      {
+        title: "The Never King",
+        author: "Nikkie St. Crowe",
+        coverImage: bookCover5,
+        shopLink: "https://elirebooks.ro/the-never-king-nikkie-st-crowe/",
       },
     ],
   },
   {
     id: "EMO",
-    title: "Povești emoționale și vindecătoare",
-    description: "Emoții profunde, conexiuni care te transformă și povești care rămân cu tine.",
+    title: "Povești despre conexiuni reale",
+    description: "Cărți în care emoțiile se construiesc firesc, iar relațiile capătă sens în timp.",
     books: [
       {
-        title: "The Notebook",
-        author: "Nicholas Sparks",
-        coverImage: bookCover4,
-        shopLink: "#",
-      },
-      {
-        title: "Me Before You",
-        author: "Jojo Moyes",
-        coverImage: bookCover5,
-        shopLink: "#",
-      },
-      {
-        title: "The Fault in Our Stars",
-        author: "John Green",
+        title: "Buttons & Lace",
+        author: "Penelope Sky",
         coverImage: bookCover6,
-        shopLink: "#",
+        shopLink: "https://elirebooks.ro/buttons-and-lace-penelope-sky/",
+      },
+      {
+        title: "Made Men Vol. 2: Căpitanul",
+        author: "Ivo Dima",
+        coverImage: capitanulCover,
+        shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
+      },
+      {
+        title: "Cei 13 magnifici",
+        author: "Hanna Lee",
+        coverImage: bookCover7,
+        shopLink: "https://elirebooks.ro/cei-13-magnifici-hanna-lee-elire/",
+      },
+      {
+        title: "Du-mă spre noi",
+        author: "Byanca Elysa",
+        coverImage: bookCover8,
+        shopLink: "https://elirebooks.ro/du-ma-spre-noi-byanca-elysa/",
       },
     ],
   },
   {
     id: "PWR",
     title: "Povești despre putere și decizie",
-    description: "Eroine puternice, alegeri dificile și iubiri care nu te slăbesc.",
+    description: "Povești bazate pe personaje puternice și fire narative bine construite, în care dorința vine din asumare, nu din impuls.",
     books: [
       {
-        title: "A Court of Thorns and Roses",
-        author: "Sarah J. Maas",
-        coverImage: bookCover7,
-        shopLink: "#",
-      },
-      {
-        title: "The Cruel Prince",
-        author: "Holly Black",
+        title: "Legați prin onoare",
+        author: "Cora Reilly",
         coverImage: bookCover9,
-        shopLink: "#",
+        shopLink: "https://elirebooks.ro/legati-prin-onoare-cora-reilly-elire/",
       },
       {
-        title: "Kingdom of the Wicked",
-        author: "Kerri Maniscalco",
-        coverImage: bookCover8,
-        shopLink: "#",
+        title: "Seria Italieni Vol. 1: Datorie Italiană Partea I",
+        author: "Ivo Dima",
+        coverImage: bookCover4,
+        shopLink: "https://elirebooks.ro/seria-italieni-vol-1-datorie-italiana-partea-i-ivo-dima-elire/",
+      },
+      {
+        title: "The Words",
+        author: "Ashley Jade",
+        coverImage: bookCover5,
+        shopLink: "https://elirebooks.ro/the-words-ashley-jade-elire/",
+      },
+      {
+        title: "Vecini Vol. 8: Dorințe ascunse",
+        author: "Hanna Lee",
+        coverImage: bookCover6,
+        shopLink: "https://elirebooks.ro/vecini-vol-8-dorinte-ascunse-hanna-lee-elire/",
       },
     ],
   },
@@ -195,7 +213,7 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
               </div>
 
               {/* Books Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 {category.books.map((book, bookIndex) => (
                   <BookCard
                     key={bookIndex}

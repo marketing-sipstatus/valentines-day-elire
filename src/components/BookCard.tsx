@@ -13,8 +13,6 @@ const BookCard = ({ title, author, coverImage, shopLink, delay = 0 }: BookCardPr
   return (
     <motion.a
       href={shopLink}
-      target="_blank"
-      rel="noopener noreferrer"
       className="group block"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
