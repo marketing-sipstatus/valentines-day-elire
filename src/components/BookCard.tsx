@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
-import { Heart, ExternalLink } from "lucide-react";
 
 interface BookCardProps {
   title: string;
   author: string;
   coverImage: string;
   shopLink: string;
+  originalPrice: string;
+  salePrice: string;
   delay?: number;
 }
 
-const BookCard = ({ title, author, coverImage, shopLink, delay = 0 }: BookCardProps) => {
+const BookCard = ({ title, author, coverImage, shopLink, originalPrice, salePrice, delay = 0 }: BookCardProps) => {
   return (
     <motion.a
       href={shopLink}
@@ -30,17 +31,17 @@ const BookCard = ({ title, author, coverImage, shopLink, delay = 0 }: BookCardPr
           />
         </div>
 
-        {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-plum/90 via-plum/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-          <div className="flex items-center gap-2 text-primary-foreground text-sm font-medium">
-            <ExternalLink size={16} />
-            <span>Vezi în magazin</span>
+        {/* Price overlay - always visible */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-plum/90 via-plum/50 to-transparent p-4 pt-10 flex items-end justify-start">
+          <div className="flex items-center gap-2">
+            <span className="text-primary-foreground/70 text-xs md:text-sm line-through">{originalPrice}</span>
+            <span className="text-primary-foreground text-sm md:text-base font-bold">{salePrice}</span>
           </div>
         </div>
 
-        {/* Heart icon */}
-        <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary-foreground/90 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
-          <Heart size={14} className="text-rose" fill="currentColor" />
+        {/* SALE badge */}
+        <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary-foreground/90 flex items-center justify-center shadow-md">
+          <span className="text-rose text-[9px] font-bold uppercase leading-none">SALE</span>
         </div>
       </div>
 

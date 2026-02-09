@@ -28,12 +28,14 @@ interface Category {
   id: "INT" | "EMO" | "PWR";
   title: string;
   description: string;
-  books: {
-    title: string;
-    author: string;
-    coverImage: string;
-    shopLink: string;
-  }[];
+    books: {
+      title: string;
+      author: string;
+      coverImage: string;
+      shopLink: string;
+      originalPrice: string;
+      salePrice: string;
+    }[];
 }
 
 const allCategories: Category[] = [
@@ -47,24 +49,32 @@ const allCategories: Category[] = [
         author: "Elliott Rose",
         coverImage: chasingTheWildCover,
         shopLink: "https://elirebooks.ro/chasing-the-wild-elliott-rose/",
+        originalPrice: "75 lei",
+        salePrice: "56,25 lei",
       },
       {
         title: "Legați prin ură",
         author: "Cora Reilly",
         coverImage: legatiPrinUraCover,
         shopLink: "https://elirebooks.ro/legati-prin-ura-cora-reilly-elire/",
+        originalPrice: "70 lei",
+        salePrice: "52,50 lei",
       },
       {
         title: "Taboo Billionaires #3: Subjugare",
         author: "Hanna Lee",
         coverImage: subjugareCover,
         shopLink: "https://elirebooks.ro/taboo-billionaires-03-subjugare-hanna-lee-elire/",
+        originalPrice: "60 lei",
+        salePrice: "45,00 lei",
       },
       {
         title: "The Never King",
         author: "Nikkie St. Crowe",
         coverImage: theNeverKingCover,
         shopLink: "https://elirebooks.ro/the-never-king-nikkie-st-crowe/",
+        originalPrice: "60 lei",
+        salePrice: "45,00 lei",
       },
     ],
   },
@@ -78,24 +88,32 @@ const allCategories: Category[] = [
         author: "Penelope Sky",
         coverImage: buttonsAndLaceCover,
         shopLink: "https://elirebooks.ro/buttons-and-lace-penelope-sky/",
+        originalPrice: "70 lei",
+        salePrice: "52,50 lei",
       },
       {
         title: "Made Men Vol. 2: Căpitanul",
         author: "Ivo Dima",
         coverImage: capitanulCoverNew,
         shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
+        originalPrice: "60 lei",
+        salePrice: "45,00 lei",
       },
       {
         title: "Cei 13 magnifici",
         author: "Hanna Lee",
         coverImage: cei13MagnificiCover,
         shopLink: "https://elirebooks.ro/cei-13-magnifici-hanna-lee-elire/",
+        originalPrice: "55 lei",
+        salePrice: "41,25 lei",
       },
       {
         title: "Du-mă spre noi",
         author: "Byanca Elysa",
         coverImage: duMaSpreNoiCover,
         shopLink: "https://elirebooks.ro/du-ma-spre-noi-byanca-elysa/",
+        originalPrice: "60 lei",
+        salePrice: "45,00 lei",
       },
     ],
   },
@@ -109,24 +127,32 @@ const allCategories: Category[] = [
         author: "Cora Reilly",
         coverImage: legatiPrinOnoareCover,
         shopLink: "https://elirebooks.ro/legati-prin-onoare-cora-reilly-elire/",
+        originalPrice: "70 lei",
+        salePrice: "52,50 lei",
       },
       {
         title: "Seria Italieni Vol. 1: Datorie Italiană Partea I",
         author: "Ivo Dima",
         coverImage: datorieItalianaCover,
         shopLink: "https://elirebooks.ro/seria-italieni-vol-1-datorie-italiana-partea-i-ivo-dima-elire/",
+        originalPrice: "55 lei",
+        salePrice: "41,25 lei",
       },
       {
         title: "The Words",
         author: "Ashley Jade",
         coverImage: theWordsCover,
         shopLink: "https://elirebooks.ro/the-words-ashley-jade-elire/",
+        originalPrice: "90 lei",
+        salePrice: "67,50 lei",
       },
       {
         title: "Vecini Vol. 8: Dorințe ascunse",
         author: "Hanna Lee",
         coverImage: dorinteAscunseCover,
         shopLink: "https://elirebooks.ro/vecini-vol-8-dorinte-ascunse-hanna-lee-elire/",
+        originalPrice: "55 lei",
+        salePrice: "41,25 lei",
       },
     ],
   },
