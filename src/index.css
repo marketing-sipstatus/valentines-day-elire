@@ -154,3 +154,33 @@
     font-family: 'Quicksand', sans-serif;
   }
 }
+
+/* Small phone quiz layout */
+@media (max-width: 480px) {
+  .quiz-mobile-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .quiz-mobile-card {
+    padding: 1rem 0.875rem;
+  }
+
+  .quiz-mobile-options {
+    gap: 0.375rem;
+  }
+
+  .quiz-mobile-option {
+    padding: 0.625rem 0.75rem;
+  }
+
+  .quiz-mobile-button-wrap {
+    margin-top: 1rem;
+  }
+
+  .quiz-mobile-question {
+    margin-bottom: 1rem;
+  }
+}
