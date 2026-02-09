@@ -13,6 +13,10 @@ import bookCover6 from "@/assets/book-cover-6.jpg";
 import bookCover7 from "@/assets/book-cover-7.jpg";
 import bookCover8 from "@/assets/book-cover-8.jpg";
 import bookCover9 from "@/assets/book-cover-9.jpg";
+import legatiPrinOnoareCover from "@/assets/legati-prin-onoare-cover.webp";
+import datorieItalianaCover from "@/assets/datorie-italiana-cover.webp";
+import theWordsCover from "@/assets/the-words-cover.webp";
+import dorinteAscunseCover from "@/assets/dorinte-ascunse-cover.webp";
 
 interface Category {
   id: "INT" | "EMO" | "PWR";
@@ -97,25 +101,25 @@ const allCategories: Category[] = [
       {
         title: "Legați prin onoare",
         author: "Cora Reilly",
-        coverImage: bookCover9,
+        coverImage: legatiPrinOnoareCover,
         shopLink: "https://elirebooks.ro/legati-prin-onoare-cora-reilly-elire/",
       },
       {
         title: "Seria Italieni Vol. 1: Datorie Italiană Partea I",
         author: "Ivo Dima",
-        coverImage: bookCover4,
+        coverImage: datorieItalianaCover,
         shopLink: "https://elirebooks.ro/seria-italieni-vol-1-datorie-italiana-partea-i-ivo-dima-elire/",
       },
       {
         title: "The Words",
         author: "Ashley Jade",
-        coverImage: bookCover5,
+        coverImage: theWordsCover,
         shopLink: "https://elirebooks.ro/the-words-ashley-jade-elire/",
       },
       {
         title: "Vecini Vol. 8: Dorințe ascunse",
         author: "Hanna Lee",
-        coverImage: bookCover6,
+        coverImage: dorinteAscunseCover,
         shopLink: "https://elirebooks.ro/vecini-vol-8-dorinte-ascunse-hanna-lee-elire/",
       },
     ],
