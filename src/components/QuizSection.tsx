@@ -72,7 +72,7 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 md:py-20 py-10 px-3 md:px-6 bg-gradient-romantic relative overflow-hidden">
+    <section className="quiz-mobile-container min-h-screen flex items-center justify-center py-10 md:py-20 px-3 md:px-6 bg-gradient-romantic relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-rose/10 blur-3xl" />
       <div className="absolute bottom-20 right-10 w-60 h-60 rounded-full bg-lavender/20 blur-3xl" />
@@ -98,7 +98,7 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
 
         {/* Question Card */}
         <motion.div
-          className="glass-card rounded-3xl p-5 md:p-8 lg:p-12 shadow-card"
+          className="quiz-mobile-card glass-card rounded-3xl p-5 md:p-8 lg:p-12 shadow-card"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
@@ -112,17 +112,17 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
               transition={{ duration: 0.3 }}
             >
               {/* Question */}
-              <h2 className="font-serif text-xl md:text-2xl lg:text-3xl text-plum text-center mb-6 md:mb-10">
+              <h2 className="quiz-mobile-question font-serif text-xl md:text-2xl lg:text-3xl text-plum text-center mb-6 md:mb-10">
                 {questions[currentQuestion].question}
               </h2>
 
               {/* Options */}
-              <div className="space-y-2.5 md:space-y-4">
+              <div className="quiz-mobile-options space-y-2.5 md:space-y-4">
                 {questions[currentQuestion].options.map((option, index) => (
                   <motion.button
                     key={index}
                     onClick={() => handleOptionSelect(index)}
-                    className={`w-full p-3.5 md:p-5 rounded-2xl text-left transition-all duration-300 border-2 ${
+                    className={`quiz-mobile-option w-full p-3.5 md:p-5 rounded-2xl text-left transition-all duration-300 border-2 ${
                       selectedOption === index
                         ? "border-rose bg-rose/10 shadow-romantic"
                         : "border-border bg-card/50 hover:border-rose/50 hover:bg-rose/5"
@@ -152,7 +152,7 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
 
           {/* Next Button */}
           <motion.div
-            className="mt-6 md:mt-10 flex justify-center"
+            className="quiz-mobile-button-wrap mt-6 md:mt-10 flex justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedOption !== null ? 1 : 0.5 }}
           >
