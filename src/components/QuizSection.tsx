@@ -130,9 +130,9 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-start gap-4">
                       <div
-                        className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                        className={`w-5 h-5 min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] flex-shrink-0 rounded-full border-2 flex items-center justify-center transition-all mt-0.5 ${
                           selectedOption === index
                             ? "border-rose bg-rose"
                             : "border-muted-foreground"
