@@ -102,9 +102,10 @@ const categories: Category[] = [
 
 interface ResultsSectionProps {
   onRestart: () => void;
+  quizResult?: string;
 }
 
-const ResultsSection = ({ onRestart }: ResultsSectionProps) => {
+const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-romantic relative overflow-hidden">
       {/* Decorative elements */}
@@ -228,6 +229,7 @@ const ResultsSection = ({ onRestart }: ResultsSectionProps) => {
             <Heart size={14} className="text-rose" fill="currentColor" />
           </div>
           <p>Cu dragoste, de Valentine's Day 2025</p>
+          <p className="mt-4 text-xs text-muted-foreground">Debug: quizResult = {quizResult}</p>
         </motion.footer>
       </div>
     </section>
