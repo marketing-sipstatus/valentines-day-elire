@@ -9,12 +9,12 @@ interface QuizSectionProps {
 
 const questions = [
   {
-    question: "Cum arată Valentine's Day pentru tine anul acesta?",
+    question: "Ce stare de spirit te caracterizează în perioada aceasta?",
     options: [
-      "Sunt singură și e ok",
-      "E complicat",
-      "Romantic, dar intens",
-      "Vreau ceva diferit",
+      "Știu ce vreau și nu fac compromisuri",
+      "Plină de emoții contradictorii",
+      "Caut liniște, emoție și conexiune reală",
+      "Curioasă și pregătită să îmi asum riscuri",
     ],
   },
   {
@@ -79,17 +79,6 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
 
       <div className="container mx-auto max-w-2xl">
         {/* Quiz intro text */}
-        {currentQuestion === 0 && (
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center font-serif text-xl md:text-2xl italic text-muted-foreground mb-12"
-          >
-            „Nu toate poveștile sunt despre iubire perfectă.
-            <br />
-            Unele sunt despre ce simți acum."
-          </motion.p>
-        )}
 
         {/* Progress bar */}
         <div className="mb-8">
