@@ -57,7 +57,7 @@ const allCategories: Category[] = [{
     originalPrice: "70 lei",
     salePrice: "52,50 lei"
   }, {
-    title: "Taboo Billionaires #3: Subjugare",
+    title: "Subjugare",
     author: "Hanna Lee",
     coverImage: subjugareCover,
     shopLink: "https://elirebooks.ro/taboo-billionaires-03-subjugare-hanna-lee-elire/",
