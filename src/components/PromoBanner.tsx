@@ -10,11 +10,10 @@ const PromoBanner = () => {
       viewport={{ once: true }}
       className="my-8 mx-auto w-full"
     >
-      {/* Desktop layout — overlay text on background */}
+      {/* Desktop layout */}
       <div className="hidden lg:block relative">
         <div className="absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-l-2xl" />
         <div className="absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-r-2xl" />
-
         <a
           href="https://elirebooks.ro/carti/"
           className="relative block overflow-hidden rounded-2xl min-h-[480px] flex items-center"
@@ -38,30 +37,30 @@ const PromoBanner = () => {
         </a>
       </div>
 
-      {/* Mobile & Tablet layout — heart image on top, text below */}
+      {/* Mobile & Tablet layout — stacked, content-based height */}
       <a
         href="https://elirebooks.ro/carti/"
-        className="lg:hidden relative block rounded-2xl overflow-hidden"
+        className="lg:hidden block rounded-2xl overflow-hidden"
       >
-        {/* Edge fades */}
-        <div className="absolute inset-y-0 left-0 w-10 z-10 bg-gradient-to-r from-[hsl(var(--lavender)/0.2)] to-transparent pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-10 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.2)] to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 top-0 h-8 z-10 bg-gradient-to-b from-[hsl(var(--lavender)/0.2)] to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-8 z-10 bg-gradient-to-t from-[hsl(var(--lavender)/0.2)] to-transparent pointer-events-none" />
+        {/* Heart image — constrained height, no stretch */}
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-[hsl(var(--lavender)/0.15)] to-transparent pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.15)] to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-6 z-10 bg-gradient-to-b from-[hsl(var(--lavender)/0.15)] to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-6 z-10 bg-gradient-to-t from-[hsl(var(--lavender)/0.15)] to-transparent pointer-events-none" />
+          <img
+            src={promoBannerHeart}
+            alt=""
+            className="w-full object-cover object-top max-h-[240px] md:max-h-[280px]"
+          />
+        </div>
 
-        {/* Background image fills container */}
-        <img
-          src={promoBannerHeart}
-          alt=""
-          className="w-full h-auto block object-cover"
-        />
-
-        {/* Text positioned in the lower portion of the image */}
-        <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col items-center text-center px-6 pb-8 md:pb-12 pt-4">
-          <h3 className="font-serif text-2xl md:text-3xl text-plum font-semibold mb-2 leading-snug drop-shadow-sm">
+        {/* Text block — tight spacing below image */}
+        <div className="bg-[hsl(var(--lavender)/0.15)] px-6 py-4 md:py-5 text-center">
+          <h3 className="font-serif text-xl md:text-2xl text-plum font-semibold mb-1 leading-snug">
             Reduceri de până la 50% la toate cărțile
           </h3>
-          <p className="text-sm md:text-base text-plum/80 font-light mb-2 leading-relaxed">
+          <p className="text-sm md:text-base text-plum/80 font-light mb-1 leading-relaxed">
             în perioada 13–15 Februarie
           </p>
           <p className="text-[10px] md:text-xs text-plum/50">
