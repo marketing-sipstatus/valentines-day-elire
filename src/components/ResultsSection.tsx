@@ -83,7 +83,7 @@ const allCategories: Category[] = [{
     originalPrice: "70 lei",
     salePrice: "52,50 lei"
   }, {
-    title: "Made Men Vol. 2: Căpitanul",
+    title: "Căpitanul",
     author: "Ivo Dima",
     coverImage: capitanulCoverNew,
     shopLink: "https://elirebooks.ro/made-men-vol-2-capitanul-ivo-dima/",
