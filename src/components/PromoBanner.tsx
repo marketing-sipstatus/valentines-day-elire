@@ -15,15 +15,16 @@ const PromoBanner = () => {
         <div className="absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-l-2xl" />
         <div className="absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-r-2xl" />
 
-        <div
-          className="relative overflow-hidden rounded-2xl min-h-[480px] flex items-center"
+        <a
+          href="https://elirebooks.ro/carti/"
+          className="relative block overflow-hidden rounded-2xl min-h-[480px] flex items-center"
           style={{
             backgroundImage: `url(${promoBannerBg})`,
             backgroundSize: "cover",
             backgroundPosition: "left center",
           }}
         >
-          <a href="https://elirebooks.ro/carti/" className="relative z-20 w-full py-16 pl-[45%] pr-10 text-left block">
+          <div className="relative z-20 w-full py-16 pl-[45%] pr-10 text-left">
             <h3 className="font-serif text-5xl text-plum font-semibold mb-3 leading-snug drop-shadow-sm">
               Reduceri de până la 50% la toate cărțile
             </h3>
@@ -33,8 +34,8 @@ const PromoBanner = () => {
             <p className="text-xs text-plum/50">
               *în limita stocului disponibil
             </p>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
 
       {/* Mobile layout — text overlaid on mobile-specific background */}
