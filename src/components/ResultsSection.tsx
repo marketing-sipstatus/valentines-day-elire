@@ -297,9 +297,12 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
               <Button
                 size="lg"
                 className="bg-gradient-button text-primary-foreground hover:opacity-90 shadow-romantic hover:shadow-glow rounded-full px-8"
+                asChild
               >
-                Vezi toate cărțile
-                <ArrowRight className="ml-2" size={18} />
+                <a href="https://elirebooks.ro/carti/">
+                  Vezi toate cărțile
+                  <ArrowRight className="ml-2" size={18} />
+                </a>
               </Button>
             </div>
           </div>
