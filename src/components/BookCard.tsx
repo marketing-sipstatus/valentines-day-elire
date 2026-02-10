@@ -27,15 +27,15 @@ const BookCard = ({ title, author, coverImage, shopLink, originalPrice, salePric
           <img
             src={coverImage}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover object-center scale-90 transition-transform duration-500 group-hover:scale-100"
           />
         </div>
 
         {/* Price overlay - always visible */}
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-plum/90 via-plum/50 to-transparent p-4 pt-10 flex items-end justify-start">
           <div className="flex items-center gap-2">
-            <span className="text-primary-foreground/70 text-xs md:text-sm line-through">{originalPrice}</span>
-            <span className="text-primary-foreground text-sm md:text-base font-bold">{salePrice}</span>
+            <span className="text-primary-foreground/70 text-[10px] md:text-xs line-through">{originalPrice}</span>
+            <span className="text-primary-foreground text-base md:text-lg font-bold">{salePrice}</span>
           </div>
         </div>
 
