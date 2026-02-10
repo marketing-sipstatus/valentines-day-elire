@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Heart, ArrowRight } from "lucide-react";
+import elireLogo from "@/assets/elire-logo.png";
 import BookCard from "./BookCard";
 import PromoBanner from "./PromoBanner";
 import { Button } from "@/components/ui/button";
@@ -173,9 +174,9 @@ const ResultsSection = ({
       }} className="text-center mb-16">
           {/* Decorative divider */}
           <div className="flex justify-center items-center mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-rose to-transparent" />
-            <Heart className="mx-4 text-rose animate-pulse-soft" size={20} fill="currentColor" />
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-rose to-transparent" />
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-plum to-transparent" />
+            <img src={elireLogo} alt="Elire" className="mx-4 h-5 w-auto" />
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-plum to-transparent" />
           </div>
 
           <h2 className="results-mobile-title font-serif text-3xl md:text-5xl text-plum font-semibold mb-6">
