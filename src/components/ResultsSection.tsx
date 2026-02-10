@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles, Heart, ArrowRight } from "lucide-react";
 import BookCard from "./BookCard";
+import PromoBanner from "./PromoBanner";
 import { Button } from "@/components/ui/button";
 
 // Import book covers
@@ -261,12 +262,10 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
                 ))}
               </div>
 
-              {/* Divider */}
-              {categoryIndex < categories.length - 1 && (
-                <div className="mt-16 flex justify-center">
-                  <div className="w-32 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-                </div>
-              )}
+              {/* Promo Banner after 1st and 2nd categories, Divider after others */}
+              {categoryIndex < 2 ? (
+                <PromoBanner />
+              ) : null}
             </motion.div>
           ))}
         </div>
