@@ -175,7 +175,7 @@ const ResultsSection = ({
           {/* Decorative divider */}
           <div className="flex justify-center items-center mb-8">
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-plum to-transparent" />
-            <img src={elireLogo} alt="Elire" className="mx-4 h-5 w-auto" />
+            <img src={elireLogo} alt="Elire" className="mx-4 h-14 w-auto" />
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-plum to-transparent" />
           </div>
 
