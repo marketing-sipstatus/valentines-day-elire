@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import QuizSection from "@/components/QuizSection";
 import ResultsSection from "@/components/ResultsSection";
@@ -7,6 +8,8 @@ import ResultsSection from "@/components/ResultsSection";
 export type QuizResult = "INT" | "EMO" | "PWR";
 
 type View = "hero" | "quiz" | "results";
+
+const VALID_RESULTS: QuizResult[] = ["INT", "EMO", "PWR"];
 
 // Each question's options map to a category by index
 const answerCategoryMap: QuizResult[][] = [
@@ -26,23 +29,29 @@ function computeQuizResult(answers: number[]): QuizResult {
     (a, b) => counts[b] - counts[a]
   );
 
-  // Clear winner
   if (counts[sorted[0]] > counts[sorted[1]]) return sorted[0];
 
-  // Tie — use Q4 as tiebreaker
   const q4Category = answerCategoryMap[3][answers[3]];
   if (sorted.slice(0, sorted.filter(c => counts[c] === counts[sorted[0]]).length).includes(q4Category)) {
     return q4Category;
   }
 
-  // Still tied, default INT
   return "INT";
 }
 
 const Index = () => {
-  const [currentView, setCurrentView] = useState<View>("hero");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Determine initial state from URL
+  const urlQuiz = searchParams.get("quiz");
+  const urlResult = searchParams.get("result");
+  const isCompleted = urlQuiz === "done" && urlResult && VALID_RESULTS.includes(urlResult as QuizResult);
+
+  const [currentView, setCurrentView] = useState<View>(isCompleted ? "results" : "hero");
   const [quizAnswers, setQuizAnswers] = useState<number[]>([]);
-  const [quizResult, setQuizResult] = useState<QuizResult>("INT");
+  const [quizResult, setQuizResult] = useState<QuizResult>(
+    isCompleted ? (urlResult as QuizResult) : "INT"
+  );
 
   const handleStartQuiz = () => {
     setCurrentView("quiz");
@@ -50,9 +59,11 @@ const Index = () => {
   };
 
   const handleQuizComplete = (answers: number[]) => {
+    const result = computeQuizResult(answers);
     setQuizAnswers(answers);
-    setQuizResult(computeQuizResult(answers));
+    setQuizResult(result);
     setCurrentView("results");
+    setSearchParams({ quiz: "done", result }, { replace: true });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -60,6 +71,7 @@ const Index = () => {
     setQuizAnswers([]);
     setQuizResult("INT");
     setCurrentView("hero");
+    setSearchParams({}, { replace: true });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
