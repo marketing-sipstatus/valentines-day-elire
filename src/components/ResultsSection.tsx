@@ -130,7 +130,7 @@ const allCategories: Category[] = [{
     originalPrice: "90 lei",
     salePrice: "67,50 lei"
   }, {
-    title: "Vecini Vol. 8: Dorințe ascunse",
+    title: "Dorințe ascunse",
     author: "Hanna Lee",
     coverImage: dorinteAscunseCover,
     shopLink: "https://elirebooks.ro/vecini-vol-8-dorinte-ascunse-hanna-lee-elire/",
