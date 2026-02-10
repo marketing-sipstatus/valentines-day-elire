@@ -248,7 +248,7 @@ const ResultsSection = ({
       }} className="mt-20 text-center">
           <div className="glass-card rounded-3xl p-10 md:p-14 max-w-2xl mx-auto">
             <Heart className="mx-auto mb-6 text-rose animate-float" size={40} fill="currentColor" />
-            <h3 className="font-serif text-2xl md:text-3xl text-plum font-semibold mb-4">www.elirebooks.ro</h3>
+            <h3 className="font-serif text-2xl md:text-3xl text-plum font-semibold mb-4"><a href="https://elirebooks.ro/">www.elirebooks.ro</a></h3>
             <p className="text-muted-foreground mb-8">
               Explorează colecția completă Elire și găsește povestea perfectă pentru tine.
             </p>
