@@ -116,7 +116,7 @@ const allCategories: Category[] = [{
     originalPrice: "70 lei",
     salePrice: "52,50 lei"
   }, {
-    title: "Seria Italieni Vol. 1: Datorie Italiană Partea I",
+    title: "Datorie Italiană I",
     author: "Ivo Dima",
     coverImage: datorieItalianaCover,
     shopLink: "https://elirebooks.ro/seria-italieni-vol-1-datorie-italiana-partea-i-ivo-dima-elire/",
