@@ -252,7 +252,7 @@ const ResultsSection = ({ onRestart, quizResult }: ResultsSectionProps) => {
               </div>
 
               {/* Books Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-1 md:px-0">
                 {category.books.map((book, bookIndex) => (
                   <BookCard
                     key={bookIndex}
