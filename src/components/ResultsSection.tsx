@@ -257,10 +257,12 @@ const ResultsSection = ({
               <Button onClick={onRestart} variant="outline" size="lg" className="border-rose text-rose hover:bg-rose/10 rounded-full px-8">
                 Reia quiz-ul
               </Button>
-              <Button size="lg" className="bg-gradient-button text-primary-foreground hover:opacity-90 shadow-romantic hover:shadow-glow rounded-full px-8">
-                Vezi toate cărțile
-                <ArrowRight className="ml-2" size={18} />
-              </Button>
+              <a href="https://elirebooks.ro/carti/">
+                <Button size="lg" className="bg-gradient-button text-primary-foreground hover:opacity-90 shadow-romantic hover:shadow-glow rounded-full px-8">
+                  Vezi toate cărțile
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
