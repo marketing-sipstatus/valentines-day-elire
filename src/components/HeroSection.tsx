@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import elireLogo from "@/assets/elire-logo.png";
 import FloatingHearts from "./FloatingHearts";
 
 interface HeroSectionProps {
@@ -32,26 +33,15 @@ const HeroSection = ({ onStartQuiz }: HeroSectionProps) => {
           className="max-w-3xl mx-auto"
         >
           {/* Decorative element */}
+          {/* Logo */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
             className="flex justify-center mb-8"
           >
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-rose to-transparent" />
-            <Sparkles className="mx-4 text-rose animate-pulse-soft" size={24} />
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-rose to-transparent" />
+            <img src={elireLogo} alt="Elire Books" className="w-28 md:w-36 h-auto" />
           </motion.div>
-
-          {/* Logo/Brand */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg font-medium tracking-widest text-lavender-deep mb-6 uppercase"
-          >
-            Elire
-          </motion.p>
 
           {/* Headline */}
           <motion.h1
