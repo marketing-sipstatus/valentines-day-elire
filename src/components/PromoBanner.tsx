@@ -23,7 +23,7 @@ const PromoBanner = () => {
             backgroundPosition: "left center",
           }}
         >
-          <div className="relative z-20 w-full py-16 pl-[45%] pr-10 text-left">
+          <a href="https://elirebooks.ro/carti/" className="relative z-20 w-full py-16 pl-[45%] pr-10 text-left block">
             <h3 className="font-serif text-5xl text-plum font-semibold mb-3 leading-snug drop-shadow-sm">
               Reduceri de până la 50% la toate cărțile
             </h3>
@@ -33,7 +33,7 @@ const PromoBanner = () => {
             <p className="text-xs text-plum/50">
               *în limita stocului disponibil
             </p>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const PromoBanner = () => {
           alt=""
           className="w-full h-auto block rounded-2xl object-cover"
         />
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pt-[20%] px-6 text-center">
+        <a href="https://elirebooks.ro/carti/" className="absolute inset-0 z-20 flex flex-col items-center justify-center pt-[20%] px-6 text-center">
           <h3 className="font-serif text-3xl text-plum font-semibold mb-2 leading-snug drop-shadow-sm">
             Reduceri de până la 50% la toate cărțile
           </h3>
@@ -58,7 +58,7 @@ const PromoBanner = () => {
           <p className="text-[10px] text-plum/50">
             *în limita stocului disponibil
           </p>
-        </div>
+        </a>
       </div>
     </motion.div>
   );
