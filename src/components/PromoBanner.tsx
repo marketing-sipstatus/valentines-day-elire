@@ -17,7 +17,7 @@ const PromoBanner = () => {
         <div className="absolute inset-y-0 right-0 w-12 md:w-20 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-r-2xl" />
 
         <div
-          className="relative overflow-hidden rounded-2xl min-h-[280px] md:min-h-[340px] flex items-center"
+          className="relative overflow-hidden rounded-2xl min-h-[380px] md:min-h-[480px] flex items-center"
           style={{
             backgroundImage: `url(${promoBannerBg})`,
             backgroundSize: "cover",
@@ -26,7 +26,7 @@ const PromoBanner = () => {
         >
           {/* Text overlay — positioned right on desktop, centered on mobile */}
           <div className="relative z-20 w-full px-6 py-12 md:py-16 md:pl-[45%] md:pr-10 text-center md:text-left">
-            <h3 className="font-serif text-2xl md:text-4xl text-plum font-semibold mb-2 md:mb-3 leading-tight drop-shadow-sm">
+            <h3 className="font-serif text-3xl md:text-5xl text-plum font-semibold mb-2 md:mb-3 leading-snug drop-shadow-sm">
               Reduceri de până la 50% la toate cărțile
             </h3>
             <p className="text-base md:text-lg text-plum/80 font-light mb-4 md:mb-6 leading-relaxed">
