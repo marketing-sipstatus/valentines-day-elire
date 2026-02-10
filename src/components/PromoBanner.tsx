@@ -7,7 +7,7 @@ const PromoBanner = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="my-16 mx-auto w-full"
+      className="my-8 mx-auto w-full"
     >
       {/* Wrapper with fade edges */}
       <div className="relative">
@@ -17,7 +17,7 @@ const PromoBanner = () => {
         <div className="absolute inset-y-0 right-0 w-12 md:w-20 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none rounded-r-2xl" />
 
         <div
-          className="relative overflow-hidden rounded-2xl min-h-[200px] md:min-h-[240px] flex items-center"
+          className="relative overflow-hidden rounded-2xl min-h-[280px] md:min-h-[340px] flex items-center"
           style={{
             backgroundImage: `url(${promoBannerBg})`,
             backgroundSize: "cover",
