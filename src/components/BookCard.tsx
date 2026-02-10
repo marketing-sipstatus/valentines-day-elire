@@ -27,7 +27,7 @@ const BookCard = ({ title, author, coverImage, shopLink, originalPrice, salePric
           <img
             src={coverImage}
             alt={title}
-            className="w-full h-full object-cover object-center scale-90 transition-transform duration-500 group-hover:scale-100"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
 
