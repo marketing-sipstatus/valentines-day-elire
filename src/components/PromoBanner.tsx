@@ -39,20 +39,22 @@ const PromoBanner = () => {
 
       {/* Mobile layout — text overlaid on mobile-specific background */}
       <div
-        className="md:hidden relative rounded-2xl overflow-hidden min-h-[520px] flex items-end justify-center"
+        className="md:hidden relative rounded-2xl overflow-hidden flex flex-col items-center"
         style={{
           backgroundImage: `url(${promoBannerMobile})`,
-          backgroundSize: "cover",
+          backgroundSize: "100% auto",
           backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          aspectRatio: "3 / 4",
         }}
       >
         <div className="absolute inset-y-0 left-0 w-12 z-10 bg-gradient-to-r from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-12 z-10 bg-gradient-to-l from-[hsl(var(--lavender)/0.3)] to-transparent pointer-events-none" />
-        <div className="relative z-20 w-full px-6 pb-10 pt-4 text-center">
+        <div className="relative z-20 w-full px-6 pt-[42%] text-center">
           <h3 className="font-serif text-3xl text-plum font-semibold mb-2 leading-snug drop-shadow-sm">
             Reduceri de până la 50% la toate cărțile
           </h3>
-          <p className="text-base text-plum/80 font-light mb-4 leading-relaxed">
+          <p className="text-base text-plum/80 font-light mb-3 leading-relaxed">
             în perioada 13–15 Februarie
           </p>
           <p className="text-[10px] text-plum/50">
